@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classSerial__TC-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Serial_TC Class Reference</div>  </div>
@@ -78,8 +79,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1084181ac129e9d2caa14995c0b9151b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a498c650db81fe09ac63fe9260b3e66a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a498c650db81fe09ac63fe9260b3e66a4">print_PID</a> (double Kp, double Ki, double Kd, double output)</td></tr>
 <tr class="separator:a498c650db81fe09ac63fe9260b3e66a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48099c90f8bdc656d0ff0fa1da284c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a> (int <a class="el" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>)</td></tr>
-<tr class="separator:a48099c90f8bdc656d0ff0fa1da284c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0861deed998b9cd8512f56457f24f640"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a0861deed998b9cd8512f56457f24f640">print_DateTime</a> (DateTime dateTime)</td></tr>
 <tr class="separator:a0861deed998b9cd8512f56457f24f640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23c326d6c75bfe208ce819b3ead0807a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a23c326d6c75bfe208ce819b3ead0807a">print_mac</a> (byte mac[])</td></tr>
@@ -96,10 +95,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a829193a8c17b3b82d265eab2068fb1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1878dadec4dfcf21bed9eee5f51f20d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a1878dadec4dfcf21bed9eee5f51f20d0">write</a> (char arr[], int anInt)</td></tr>
 <tr class="separator:a1878dadec4dfcf21bed9eee5f51f20d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a48099c90f8bdc656d0ff0fa1da284c8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a> (int <a class="el" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>)</td></tr>
+<tr class="separator:a48099c90f8bdc656d0ff0fa1da284c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00010">10</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="textblock"><p>This class is for the Serial Commands used in Tank Controller. Serial here mostly deals with writing or printing data over through the serial port. Serial.print and Serial.write can be called in different ways to print data. Also print_PID, print_DataTime, print_mac are used to print the PID information, current date information, and the mac address. </p>
+
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00011">11</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1084181ac129e9d2caa14995c0b9151b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1084181ac129e9d2caa14995c0b9151b">&#9670;&nbsp;</a></span>Serial_TC()</h2>
@@ -124,10 +129,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00013">13</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;              {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    Serial.begin(9600);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00021">21</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;              {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Serial.begin(9600);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -156,10 +161,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00074">74</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                             {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Serial.println(aString);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00079">79</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                             {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    Serial.println(aString);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,11 +202,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00064">64</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Serial.print(aString);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Serial.println(anInt);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00069">69</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Serial.print(aString);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Serial.println(anInt);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -245,11 +250,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00069">69</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                                    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Serial.print(aString);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    Serial.println(anInt, format);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00074">74</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                                    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    Serial.print(aString);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    Serial.println(anInt, format);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,11 +292,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00059">59</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                              {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Serial.println(aString);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Serial.println(aString2);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00064">64</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                              {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Serial.println(aString);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    Serial.println(aString2);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00006">unittest()</a>.</p>
 
@@ -321,23 +326,23 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00034">34</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                         {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Serial.print(dateTime.year(), DEC);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Serial.print(<span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.month());</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Serial.print(<span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.day());</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    Serial.print(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.hour());</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    Serial.print(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.minute());</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Serial.print(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.second());</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    Serial.println();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00039">39</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                         {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    Serial.print(dateTime.year(), DEC);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Serial.print(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.month());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    Serial.print(<span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.day());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Serial.print(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.hour());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Serial.print(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.minute());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Serial.print(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">print_two_digits</a>(dateTime.second());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Serial.println();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Serial__TC_8h_source.html#l00028">print_two_digits()</a>.</p>
+<p class="reference">References <a class="el" href="Serial__TC_8h_source.html#l00013">print_two_digits()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00006">unittest()</a>.</p>
 
@@ -367,16 +372,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00049">49</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                             {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Serial.print(F(<span class="stringliteral">&quot;MAC Address: &quot;</span>));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Serial.print(mac[0]);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; 6; ++i) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      Serial.print(<span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      Serial.print(mac[i]);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    Serial.println();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00054">54</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                             {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    Serial.print(F(<span class="stringliteral">&quot;MAC Address: &quot;</span>));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    Serial.print(mac[0]);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; 6; ++i) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      Serial.print(<span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      Serial.print(mac[i]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Serial.println();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00006">unittest()</a>.</p>
 
@@ -427,18 +432,19 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Print the PID. </p>
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00017">17</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                                 {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    Serial.print(F(<span class="stringliteral">&quot;Kp:&quot;</span>));</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Serial.print(Kp);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Serial.print(F(<span class="stringliteral">&quot; Ki:&quot;</span>));</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Serial.print(Ki);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    Serial.print(F(<span class="stringliteral">&quot; Kd:&quot;</span>));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Serial.println(Kd);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Serial.print(F(<span class="stringliteral">&quot;PID output (s): &quot;</span>));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Serial.println(output / 1000, 1);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00028">28</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Serial.print(F(<span class="stringliteral">&quot;Kp:&quot;</span>));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Serial.print(Kp);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Serial.print(F(<span class="stringliteral">&quot; Ki:&quot;</span>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Serial.print(Ki);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Serial.print(F(<span class="stringliteral">&quot; Kd:&quot;</span>));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Serial.println(Kd);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    Serial.print(F(<span class="stringliteral">&quot;PID output (s): &quot;</span>));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Serial.println(output / 1000, 1);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00006">unittest()</a>.</p>
 
@@ -463,22 +469,22 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00028">28</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                   {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a> &lt; 10) {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      Serial.print(<span class="charliteral">&#39;0&#39;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Serial.print(<a class="code" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>, DEC);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00013">13</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                                   {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a> &lt; 10) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      Serial.print(<span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Serial.print(<a class="code" href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a>, DEC);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="Blink_8cpp_source.html#l00015">value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Serial__TC_8h_source.html#l00034">print_DateTime()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Serial__TC_8h_source.html#l00039">print_DateTime()</a>.</p>
 
 </div>
 </div>
@@ -506,10 +512,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00078">78</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                         {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Serial.write(aByte);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00083">83</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                         {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    Serial.write(aByte);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="Serial__TC_8cpp_source.html#l00006">unittest()</a>.</p>
 
@@ -549,10 +555,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00082">82</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    Serial.write(arr, anInt);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="Serial__TC_8h_source.html#l00087">87</a> of file <a class="el" href="Serial__TC_8h_source.html">Serial_TC.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Serial.write(arr, anInt);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -561,7 +567,7 @@ Public Member Functions</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aBlink_8cpp_html_a0376be5904d0dd864b7d97c9ce1295ab"><div class="ttname"><a href="Blink_8cpp.html#a0376be5904d0dd864b7d97c9ce1295ab">value</a></div><div class="ttdeci">bool value</div><div class="ttdef"><b>Definition:</b> <a href="Blink_8cpp_source.html#l00015">Blink.cpp:15</a></div></div>
-<div class="ttc" id="aclassSerial__TC_html_a48099c90f8bdc656d0ff0fa1da284c8c"><div class="ttname"><a href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">Serial_TC::print_two_digits</a></div><div class="ttdeci">void print_two_digits(int value)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00028">Serial_TC.h:28</a></div></div>
+<div class="ttc" id="aclassSerial__TC_html_a48099c90f8bdc656d0ff0fa1da284c8c"><div class="ttname"><a href="classSerial__TC.html#a48099c90f8bdc656d0ff0fa1da284c8c">Serial_TC::print_two_digits</a></div><div class="ttdeci">void print_two_digits(int value)</div><div class="ttdef"><b>Definition:</b> <a href="Serial__TC_8h_source.html#l00013">Serial_TC.h:13</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
