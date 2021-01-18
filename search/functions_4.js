@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['liquidcrystal_5ftc_95',['LiquidCrystal_TC',['../classLiquidCrystal__TC.html#a127762ac0dd655d2299d97c5ef296911',1,'LiquidCrystal_TC']]],
-  ['loop_96',['loop',['../classTankControllerLib.html#a231e4bec233ac32a49745f4af710ffe3',1,'TankControllerLib']]]
+  ['getresistance_135',['getResistance',['../classTempProbe__TC.html#a29525c21758d0bb355dcec35b9d29c38',1,'TempProbe_TC']]],
+  ['gettemperature_136',['getTemperature',['../classTempProbe__TC.html#ac7f6adbb3d669636b37d00205680f08f',1,'TempProbe_TC']]]
 ];
