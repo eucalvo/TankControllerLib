@@ -15,7 +15,6 @@ unittest(chillerUpdateControlBeforeIntervalAndWithinDelta) {
   Chiller chiller;
   assertFalse(chiller.getCurrentSwitchState());
   chiller.setTargetTemperature(20);
-  // delay(31000);
   chiller.updateControl(20.04);
   assertFalse(chiller.getCurrentSwitchState());
 }
@@ -24,7 +23,6 @@ unittest(chillerUpdateControlbBeforeIntervalAndOutsideOfDelta) {
   Chiller chiller;
   assertFalse(chiller.getCurrentSwitchState());
   chiller.setTargetTemperature(20);
-  // delay(31000);
   chiller.updateControl(20.05);
   assertFalse(chiller.getCurrentSwitchState());
 }
