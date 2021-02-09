@@ -5,7 +5,6 @@
 #include "TankControllerLib.h"
 #include "TemperatureControl.h"
 
-
 /*
 bundle exec arduino_ci.rb --skip-examples-compilation --testfile-select=TemperatureControlTest.cpp
 */
