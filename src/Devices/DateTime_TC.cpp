@@ -53,3 +53,16 @@ void DateTime_TC::yearMonthAsPath(char* buffer, size_t sizeOfBuffer) {
   }
   itoa(month(), buffer + i, 10);
 }
+
+/*
+  uint8_t yOff; ///< Year offset from 2000
+  uint8_t m;    ///< Month 1-12
+  uint8_t d;    ///< Day 1-31
+  uint8_t hh;   ///< Hours 0-23
+  uint8_t mm;   ///< Minutes 0-59
+  uint8_t ss;   ///< Seconds 0-59
+*/
+
+void DateTime_TC::setAsCurrent() {
+  RTC_PCF8523::adjust(DateTime(yOff, m, d, hh, mm, ss));
+}

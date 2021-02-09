@@ -14,4 +14,5 @@ public:
   DateTime_TC(uint16_t year, uint8_t month, uint8_t day, uint8_t hour = 0, uint8_t min = 0, uint8_t sec = 0);
   void printToSerial();                             // DigitalClockDisplay.ino
   void yearMonthAsPath(char* buffer, size_t size);  // DoDirectoryMaintenance.ino
+  void setAsCurrent();
 };
