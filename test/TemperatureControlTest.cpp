@@ -5,12 +5,11 @@
 #include "TankControllerLib.h"
 #include "TemperatureControl.h"
 /**
-* These tests test the UpdateControl virtual function for the heater and chiller subclass and
-* checks to see whether the heater or chiller should be in an on state or an off state.
-* The following command lets you skip all the other tests and only run these tests
-* bundle exec arduino_ci.rb --skip-examples-compilation --testfile-select=TemperatureControlTest.cpp
-*/
-
+ * These tests test the UpdateControl virtual function for the heater and chiller subclass and
+ * checks to see whether the heater or chiller should be in an on state or an off state.
+ * The following command lets you skip all the other tests and only run these tests
+ * bundle exec arduino_ci.rb --skip-examples-compilation --testfile-select=TemperatureControlTest.cpp
+ */
 
 // Chiller
 unittest(BeforeIntervalAndWithinDelta) {

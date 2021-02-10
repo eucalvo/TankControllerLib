@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
 /**
-* Temperature Control
-* Controlling the tank temperature is done by external devices that are controlled by setting 
-*designated pins on the Arduino.
-*/
+ * Temperature Control
+ * Controlling the tank temperature is done by external devices that are controlled by setting
+ * designated pins on the Arduino.
+ */
 
 class TemperatureControl {
 protected:
