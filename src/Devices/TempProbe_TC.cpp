@@ -23,9 +23,4 @@ TempProbe_TC* TempProbe_TC::instance() {
  */
 TempProbe_TC::TempProbe_TC() {
   thermo.begin(MAX31865_3WIRE);  // Start pt100 temperature probe with 3 wire configuration
-  // Remove these lines when Adafruit_MAX31865_CI has proper initialization
-#ifdef MOCK_PINS_COUNT
-  thermo.setRTD(0);
-  thermo.setFault(0);
-#endif
 }
