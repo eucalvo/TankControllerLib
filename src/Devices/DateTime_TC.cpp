@@ -1,5 +1,7 @@
 #include "Devices/DateTime_TC.h"
+
 #include "Devices/Serial_TC.h"
+
 
 RTC_PCF8523 *DateTime_TC::_rtc = nullptr;
 
@@ -10,7 +12,7 @@ RTC_PCF8523 *DateTime_TC::rtc() {
     if (!_rtc->begin()) {
       Serial.println(F("Couldn't find RTC"));
       while (true)
-        ; // infinite loop; hang forever
+        ;  // infinite loop; hang forever
     }
 
     if (!_rtc->initialized()) {
@@ -24,17 +26,16 @@ RTC_PCF8523 *DateTime_TC::rtc() {
 
 DateTime_TC DateTime_TC::now() {
   DateTime now = rtc()->now();
-  return DateTime_TC(now.year(), now.month(), now.day(), now.hour(),
-                     now.minute(), now.second());
+  return DateTime_TC(now.year(), now.month(), now.day(), now.hour(), now.minute(), now.second());
 }
 
 //  instance methods
 /**
  * Constructor
  */
-DateTime_TC::DateTime_TC(uint16_t year, uint8_t month, uint8_t day,
-                         uint8_t hour, uint8_t min, uint8_t sec)
-    : DateTime(year, month, day, hour, min, sec) {}
+DateTime_TC::DateTime_TC(uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec)
+    : DateTime(year, month, day, hour, min, sec) {
+}
 
 /**
  * output dateTime to serialPort(DigitalClockDisplay.ino)
@@ -61,7 +62,7 @@ void DateTime_TC::printToSerial() {
  */
 void DateTime_TC::yearMonthAsPath(char *buffer, size_t sizeOfBuffer) {
   memset(buffer, 0, sizeOfBuffer);
-  if (sizeOfBuffer < 9) { // is there enough room?
+  if (sizeOfBuffer < 9) {  // is there enough room?
     return;
   }
   buffer[0] = '/';
