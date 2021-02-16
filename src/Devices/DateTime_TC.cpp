@@ -2,7 +2,6 @@
 
 #include "Devices/Serial_TC.h"
 
-
 RTC_PCF8523 *DateTime_TC::_rtc = nullptr;
 
 RTC_PCF8523 *DateTime_TC::rtc() {
