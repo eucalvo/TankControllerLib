@@ -1,27 +1,47 @@
 #include "Devices/DateTime_TC.h"
-
 #include "Devices/Serial_TC.h"
 
-//  class methods
+RTC_PCF8523 *DateTime_TC::_rtc = nullptr;
+
+RTC_PCF8523 *DateTime_TC::rtc() {
+  if (!_rtc) {
+    _rtc = new RTC_PCF8523;
+    // Starting Real Time CLock and Setting time
+    if (!_rtc->begin()) {
+      Serial.println(F("Couldn't find RTC"));
+      while (true)
+        ; // infinite loop; hang forever
+    }
+
+    if (!_rtc->initialized()) {
+      Serial.println(F("RTC is NOT running!"));
+      // set the RTC to the date & time this file was compiled
+      _rtc->adjust(DateTime(F(__DATE__), F(__TIME__)));
+    }
+  }
+  return _rtc;
+}
+
 DateTime_TC DateTime_TC::now() {
-  DateTime now = RTC_PCF8523::now();
-  return DateTime_TC(now.year(), now.month(), now.day(), now.hour(), now.minute(), now.second());
+  DateTime now = rtc()->now();
+  return DateTime_TC(now.year(), now.month(), now.day(), now.hour(),
+                     now.minute(), now.second());
 }
 
 //  instance methods
 /**
  * Constructor
  */
-DateTime_TC::DateTime_TC(uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t min, uint8_t sec)
-    : DateTime(year, month, day, hour, min, sec) {
-}
+DateTime_TC::DateTime_TC(uint16_t year, uint8_t month, uint8_t day,
+                         uint8_t hour, uint8_t min, uint8_t sec)
+    : DateTime(year, month, day, hour, min, sec) {}
 
 /**
  * output dateTime to serialPort(DigitalClockDisplay.ino)
  * "2020-11-26 18:55:15"
  */
 void DateTime_TC::printToSerial() {
-  Serial_TC* serial = Serial_TC::instance();
+  Serial_TC *serial = Serial_TC::instance();
   serial->print(year());
   serial->print('-');
   serial->print_two_digits(month());
@@ -39,9 +59,9 @@ void DateTime_TC::printToSerial() {
 /**
  * populate a buffer with dateTime as a path: "/2020/09"
  */
-void DateTime_TC::yearMonthAsPath(char* buffer, size_t sizeOfBuffer) {
+void DateTime_TC::yearMonthAsPath(char *buffer, size_t sizeOfBuffer) {
   memset(buffer, 0, sizeOfBuffer);
-  if (sizeOfBuffer < 9) {  // is there enough room?
+  if (sizeOfBuffer < 9) { // is there enough room?
     return;
   }
   buffer[0] = '/';
@@ -54,15 +74,7 @@ void DateTime_TC::yearMonthAsPath(char* buffer, size_t sizeOfBuffer) {
   itoa(month(), buffer + i, 10);
 }
 
-/*
-  uint8_t yOff; ///< Year offset from 2000
-  uint8_t m;    ///< Month 1-12
-  uint8_t d;    ///< Day 1-31
-  uint8_t hh;   ///< Hours 0-23
-  uint8_t mm;   ///< Minutes 0-59
-  uint8_t ss;   ///< Seconds 0-59
-*/
-
 void DateTime_TC::setAsCurrent() {
-  RTC_PCF8523::adjust(DateTime(yOff, m, d, hh, mm, ss));
+  DateTime newDT(yOff + 2000, m, d, hh, mm, ss);
+  rtc()->adjust(newDT);
 }
