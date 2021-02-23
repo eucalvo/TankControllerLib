@@ -56,8 +56,8 @@ unittest(yearMonthAsPath) {
 }
 
 unittest(setAsCurrent) {
-  DateTime_TC jan(2021, 1, 15, 1, 48, 24);
-  jan.setAsCurrent();
+  DateTime_TC january(2021, 1, 15, 1, 48, 24);
+  january.setAsCurrent();
 
   DateTime_TC now1 = DateTime_TC::now();
   assertEqual(2021, now1.year());
