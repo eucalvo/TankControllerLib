@@ -1,19 +1,20 @@
-// #include "CalibrationManagement.h"
-// #include "ChangeGoogleSheetInterval.h"
-// #include "ChangeTankID.h"
-// #include "EnablePID.h"
-// #include "ManualSetTime.h"
-// #include "PHCalibration.h"
-// #include "PIDTuningMenu.h"
-// #include "ResetLCDScreen.h"
-// #include "SeeDeviceUptime.h"
-// #include "SeePIDConstants.h"
-// #include "SeeTankID.h"
-// #include "SetChillOrHeat.h"
-#include "SetPHSetPoint.h"
-// #include "SetTempSetPoint.h"
-// #include "TemperatureCalibration.h"
 #include "MainMenu.h"
+
+#include "CalibrationManagement.h"
+#include "ChangeGoogleSheetInterval.h"
+#include "ChangeTankID.h"
+#include "EnablePID.h"
+#include "ManualSetTime.h"
+#include "PHCalibration.h"
+#include "PIDTuningMenu.h"
+#include "ResetLCDScreen.h"
+#include "SeeDeviceUptime.h"
+#include "SeePIDConstants.h"
+#include "SeeTankID.h"
+#include "SetChillOrHeat.h"
+#include "SetPHSetPoint.h"
+#include "SetTempSetPoint.h"
+#include "TemperatureCalibration.h"
 
 /**
  * Branch to other states to handle various menu options
@@ -24,7 +25,7 @@ void MainMenu::handleKey(char key) {
       this->changeState((UIState*)new SetPHSetPoint);
       break;
     case 'B':  // Change Temperature set_point
-      // this->changeState((UIState*) new SetTempSetPoint);
+      this->changeState((UIState*)new SetTempSetPoint);
       break;
     case 'C':  // pH Calibration
       // this->changeState((UIState*) new PHCalibration);

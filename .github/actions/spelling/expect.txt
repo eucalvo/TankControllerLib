@@ -15,6 +15,7 @@ Dnominal
 Doxyfile
 Doxygen
 eep
+eeprom
 emoji
 endif
 endl
@@ -22,6 +23,7 @@ Gemfile
 github
 godmode
 Google
+hh
 HIGHTHRESH
 homepage
 http
@@ -56,11 +58,15 @@ REFIN
 REFINHIGH
 REFINLOW
 rpc
+rtc
 rtd
 RTDIN
 RTDINLOW
 sizeof
+sprintf
+strcpy
 strlen
+substr
 testfile
 TODO
 uint
