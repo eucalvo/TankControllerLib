@@ -22,7 +22,7 @@ public:
   void print(String aString, char aChar);
   void print(String aString, int anInt);
   void print(String aString, int anInt, int format);
-  void print(String aString, String aString2);
+  void print(char *aString, char *aString2);
   void println() {
     Serial.println();
   }
