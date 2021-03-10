@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
 
+#include "Devices/Keypad_TC.h"
 #include <iostream>
 
 #include "EEPROM_TC.h"
