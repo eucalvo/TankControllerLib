@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mainmenu_214',['MainMenu',['../classMainMenu.html',1,'']]]
+  ['mainmenu_286',['MainMenu',['../classMainMenu.html',1,'']]],
+  ['manualsettime_287',['ManualSetTime',['../classManualSetTime.html',1,'']]]
 ];
