@@ -1,7 +1,7 @@
-#include "Devices/EEPROM_TC.h"
 #include "Devices/PID_TC.h"
-#include "Devices/Serial_TC.h"
 
+#include "Devices/EEPROM_TC.h"
+#include "Devices/Serial_TC.h"
 
 // class variable
 PID_TC *PID_TC::_instance = nullptr;

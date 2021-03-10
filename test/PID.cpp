@@ -1,9 +1,9 @@
-#include "Devices/PID_TC.h"
-#include "Devices/Serial_TC.h"
 #include <Arduino.h>
 #include <ArduinoUnitTests.h>
 #include <PID_v1.h>
 
+#include "Devices/PID_TC.h"
+#include "Devices/Serial_TC.h"
 
 unittest(singleton) {
   PID_TC *singleton1 = PID_TC::instance();

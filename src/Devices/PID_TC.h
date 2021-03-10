@@ -12,8 +12,8 @@ public:
   void logToSerial();
   void setTunings(double Kp, double Ki, double Kd);
   // used by tests to get Kp, Ki, Kd
-  PID *getPID() { 
-    return pPID; 
+  PID *getPID() {
+    return pPID;
   }
 
 private:
