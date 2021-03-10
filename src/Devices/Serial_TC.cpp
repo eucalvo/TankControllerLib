@@ -38,7 +38,6 @@ void Serial_TC::print(double aDouble, int scale) {
 }
 
 void Serial_TC::print(String aString, bool newLine) {
-  std::cout << __FILE__ << ":" << __LINE__ << std::endl;
   if (newLine) {
     Serial.println(aString);
   } else {
@@ -62,6 +61,11 @@ void Serial_TC::print(String aString, int anInt, int format) {
 }
 
 void Serial_TC::print(char *aString, char *aString2) {
+  Serial.print(aString);
+  Serial.println(aString2);
+}
+
+void Serial_TC::print(String aString, String aString2) {
   Serial.print(aString);
   Serial.println(aString2);
 }
