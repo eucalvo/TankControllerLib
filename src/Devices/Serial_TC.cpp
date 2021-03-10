@@ -21,11 +21,17 @@ Serial_TC *Serial_TC::instance() {
 /**
  * constructor (private so clients use the singleton)
  */
-Serial_TC::Serial_TC() { Serial.begin(9600); }
+Serial_TC::Serial_TC() { 
+  Serial.begin(9600); 
+}
 
-void Serial_TC::print(char aChar) { Serial.print(aChar); }
+void Serial_TC::print(char aChar) { 
+  Serial.print(aChar); 
+}
 
-void Serial_TC::print(uint16_t anInt) { Serial.print(anInt); }
+void Serial_TC::print(uint16_t anInt) { 
+  Serial.print(anInt); 
+}
 
 void Serial_TC::print(double aDouble, int scale) {
   Serial.print(aDouble, scale);
@@ -79,6 +85,10 @@ void Serial_TC::print_two_digits(int value) {
   Serial.print(value, DEC);
 }
 
-void Serial_TC::write(byte aByte) { Serial.write(aByte); }
+void Serial_TC::write(byte aByte) { 
+  Serial.write(aByte); 
+}
 
-void Serial_TC::write(char arr[], int anInt) { Serial.write(arr, anInt); }
+void Serial_TC::write(char arr[], int anInt) { 
+  Serial.write(arr, anInt); 
+}

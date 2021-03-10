@@ -23,7 +23,9 @@ public:
   void print(String aString, int anInt);
   void print(String aString, int anInt, int format);
   void print(String aString, String aString2);
-  void println() { Serial.println(); }
+  void println() { 
+    Serial.println(); 
+  }
   void print_mac(byte mac[]);
   void print_two_digits(int value);
   void write(byte aByte);
